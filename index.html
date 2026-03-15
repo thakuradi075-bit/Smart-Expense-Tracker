@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container" id="homePage">
+
+<h2>Smart Expense Tracker</h2>
+
+<input id="username" placeholder="Enter your name">
+
+<button onclick="startApp()">Start</button>
+
+<p class="credit">Made by Aditya Thakur</p>
+
+</div>
+
+
+<div class="container" id="menuPage">
+
+<h2 id="welcome"></h2>
+
+<button onclick="openTracker()">Analyse Expenses</button>
+<button onclick="openPlanner()">Plan Future Expenses</button>
+
+<p class="credit">Made by Aditya Thakur</p>
+
+</div>
+
+
+<div class="container" id="trackerPage">
+
+<button onclick="goBack()">Back</button>
+
+<h3>Expense Tracker</h3>
+
+<input id="name" placeholder="Expense name">
+
+<select id="category" onchange="toggleOther()">
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Other</option>
+</select>
+
+<input id="otherCategory" placeholder="Enter category">
+
+<input id="amount" type="number" placeholder="Amount">
+
+<button onclick="addExpense()">Add Expense</button>
+<button onclick="showTotal()">Show Total</button>
+<button onclick="showGraph()">Show Graph</button>
+
+<table id="expenseTable">
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+</table>
+
+<h3 id="total"></h3>
+
+<div id="chartContainer">
+<canvas id="chart"></canvas>
+</div>
+
+<p class="credit">Made by Aditya Thakur</p>
+
+</div>
+
+
+<div class="container" id="plannerPage">
+
+<button onclick="goBack()">Back</button>
+
+<h3>Budget Planner</h3>
+
+<input id="budget" type="number" placeholder="Monthly Budget">
+<input id="limit" type="number" placeholder="Expense Warning Limit">
+
+<button onclick="setBudget()">Set Budget</button>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<h3 id="budgetResult"></h3>
+
+<div id="plannerInputs">
+
+<input id="planName" placeholder="Expense name">
+<input id="planAmount" type="number" placeholder="Amount">
+
+<button onclick="addPlannedExpense()">Add</button>
+<button onclick="showPlannerChart()">Show Chart</button>
+
+<table id="plannerTable">
+<tr>
+<th>Name</th>
+<th>Amount</th>
+</tr>
+</table>
+
+<div id="plannerChartBox">
+<canvas id="plannerChart"></canvas>
+</div>
+
+</div>
+
+<p class="credit">Made by Aditya Thakur</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
