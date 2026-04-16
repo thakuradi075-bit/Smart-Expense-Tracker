@@ -230,9 +230,9 @@ plannedExpenses.push({name,amount})
 
 remainingBudget-=amount
 
-if(warningLimit && totalSpent >= warningLimit){
-alert("⚠ Warning: Budget reaching limit!")
-}
+if(warningLimit && remainingBudget <= warningLimit){
+    alert("⚠ Warning: Budget reaching limit!")
+    }
 
 updatePlannerTable()
 updateBudgetUI()
