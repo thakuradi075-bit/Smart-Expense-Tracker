@@ -75,6 +75,12 @@ expenses[editIndex]=expense
 editIndex=null
 }else{
 expenses.push(expense)
+addDoc(collection(db, "expenses"), {
+    name: name,
+    category: category,
+    amount: amount,
+    date: new Date()
+  });
 }
 
 updateTable()
