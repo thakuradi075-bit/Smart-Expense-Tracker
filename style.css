@@ -94,3 +94,133 @@ body{
     font-size:12px;
     color:#555;
     }
+    /* 🔥 GLOBAL FIX */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    text-align:center;
+    margin:0;
+    padding:10px;
+}
+
+.container{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    width:90%;
+    max-width:500px;
+    margin:40px auto;
+    box-shadow:0 15px 25px rgba(0,0,0,0.3);
+}
+
+button{
+    padding:10px 15px;
+    margin:6px;
+    border:none;
+    border-radius:6px;
+    background:#667eea;
+    color:white;
+    cursor:pointer;
+    display:block;
+    width:100%;
+}
+
+button:hover{
+    background:#4b5fd1;
+}
+
+input,select{
+    padding:8px;
+    margin:5px 0;
+    width:100%;
+}
+
+table{
+    margin:auto;
+    border-collapse:collapse;
+    margin-top:15px;
+    width:100%;
+}
+
+td,th{
+    border:1px solid #ddd;
+    padding:8px;
+}
+
+th{
+    background:#667eea;
+    color:white;
+}
+
+#menuPage,#trackerPage,#plannerPage{
+    display:none;
+}
+
+.progress{
+    width:100%;
+    background:#ddd;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.progress-bar{
+    height:20px;
+    background:#667eea;
+    width:100%;
+    border-radius:10px;
+}
+
+#chartContainer{
+    width:100%;
+    margin:auto;
+    margin-top:20px;
+    display:none;
+}
+
+#plannerInputs{
+    display:none;
+}
+
+#plannerChartBox{
+    display:none;
+}
+
+#otherCategory{
+    display:none;
+}
+
+.credit{
+    margin-top:20px;
+    font-size:12px;
+    color:#555;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width:600px){
+
+.container{
+    width:95%;
+    margin:20px auto;
+    padding:15px;
+}
+
+h2,h3{
+    font-size:20px;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+canvas{
+    width:100% !important;
+    height:auto !important;
+}
+
+}
